@@ -1,7 +1,6 @@
 function validarCorreo() {
     const inputCorreo = document.getElementById('inputCorreo');
     const buttonUnirme = document.getElementById('buttonUnirme');
-    const mensajeError = document.getElementById('mensajeError');
 
     // Expresión regular para validar formato de correo electrónico
     const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,11 +9,9 @@ function validarCorreo() {
     if (regexCorreo.test(inputCorreo.value)) {
         // Habilitar el botón y ocultar el mensaje de error
         buttonUnirme.disabled = false;
-        mensajeError.style.display = 'none';
     } else {
         // Deshabilitar el botón y mostrar el mensaje de error
         buttonUnirme.disabled = true;
-        mensajeError.style.display = 'block';
     }
 }
 
@@ -53,5 +50,9 @@ function startCountdown() {
     }, 1000);
 }
 
-// Iniciar la cuenta regresiva cuando se cargue la página
-window.onload = startCountdown;
+// Asignar el evento oninput al campo de entrada y iniciar la cuenta regresiva cuando se cargue la página
+window.onload = function () {
+    const inputCorreo = document.getElementById('inputCorreo');
+    inputCorreo.oninput = validarCorreo;
+    startCountdown();
+};

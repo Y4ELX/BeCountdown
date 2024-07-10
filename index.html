@@ -8,7 +8,7 @@
     <title>Countdown</title>
 
     <!-- Preload de fuentes -->
-    <link rel="preload" href="fonts/mn.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="fonts/mn.ttf" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="preload" href="fonts/ds.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="fonts/neue.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     
@@ -53,13 +53,10 @@
                 
             <div style="position: relative; z-index: 3; border-radius: 0.7vh; margin-inline: 9.7vh; margin-top: 6vh; padding: 0.3vh; height: 3.5vh; display: flex; justify-content: space-between; border: solid 0.2vh #ffffffbb;">
                 <input id="inputCorreo" class="inputCorreo" type="email" placeholder="ejemplo@correo.com">
-                <button id="buttonUnirme" class="buttonUnirme" onclick="validarCorreo()">
+                <button id="buttonUnirme" class="buttonUnirme">
                     Unirme a la lista de espera
                     <img src="assets/arrow.png" style="height: 2vh;" alt="">
                 </button>
-
-                <div id="mensajeError" style="position: absolute; top: 2vh; color: red; display: none;">Por favor ingresa un correo válido.</div>
-
             </div>
         </div>
 
