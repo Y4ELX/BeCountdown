@@ -92,7 +92,7 @@ body{
 }
 
 .inputCorreo{
-    width: 70%;
+    width: 50%;
     height: 100%;
     border: none;
     background-color: transparent;
@@ -150,6 +150,7 @@ body{
 
 .buttonUnirme{
     height: 100%;
+    width: fit-content;
     font-family: neue;
     background-color: #ffffffbb;
     border: none;

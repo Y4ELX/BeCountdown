@@ -1,3 +1,23 @@
+function validarCorreo() {
+    const inputCorreo = document.getElementById('inputCorreo');
+    const buttonUnirme = document.getElementById('buttonUnirme');
+    const mensajeError = document.getElementById('mensajeError');
+
+    // Expresión regular para validar formato de correo electrónico
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Verificar si el correo ingresado es válido
+    if (regexCorreo.test(inputCorreo.value)) {
+        // Habilitar el botón y ocultar el mensaje de error
+        buttonUnirme.disabled = false;
+        mensajeError.style.display = 'none';
+    } else {
+        // Deshabilitar el botón y mostrar el mensaje de error
+        buttonUnirme.disabled = true;
+        mensajeError.style.display = 'block';
+    }
+}
+
 function startCountdown() {
     // Fecha objetivo: sábado 13 de julio
     const targetDate = new Date("July 13, 2024 00:00:00").getTime();
