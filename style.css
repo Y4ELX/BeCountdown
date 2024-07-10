@@ -1,0 +1,177 @@
+body{
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: ds;
+    src: url(fonts/ds.ttf);
+}
+
+@font-face {
+    font-family: neue;
+    src: url(fonts/neue.ttf);
+}
+
+@font-face {
+    font-family: mn;
+    src: url(fonts/mn.ttf);
+}
+
+.text{
+    padding-inline: 10vh;
+    font-size: 2.3vh;
+    font-family: neue;
+    text-align: center;
+
+}
+
+.principalContainer {
+    width: 100%;
+    height: 100%;
+
+    background-color: #171719;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    /* Necesario para el pseudo-elemento */
+}
+
+/* Usamos un pseudo-elemento para aplicar restricciones de tamaño */
+.principalContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90vh;
+    background-image: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+    background-size: contain;
+    /* Mantiene la relación de aspecto de la imagen */
+    z-index: -1;
+    /* Envía el pseudo-elemento detrás del contenido principal */
+    margin: auto;
+}
+
+.opaqueDiv {
+    user-select: none;
+    position: relative;
+    height: 65vh;
+    width: 70%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    backdrop-filter: blur(1vh);
+    -webkit-backdrop-filter: blur(1vh);
+
+    border: solid 0.2vh rgba(255, 255, 255, 0.277);
+}
+
+.mensajes{
+    z-index: 3;
+    border-radius: 0.7vh;
+    padding-inline: 1vh;
+    height: 3.5vh;
+    display: flex;
+    justify-content: space-between;
+    border: solid 0.2vh #ffffffbb;
+    font-size: 1.6vh;
+    color: white;
+    font-family: mn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inputCorreo{
+    width: 70%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    z-index: 5;
+    font-size: 2vh;
+    padding-left: 1vh;
+}
+
+.inputCorreo:focus{
+    outline: none;
+}
+
+.clock{
+    height: 60%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: ds;
+    font-size: 8vh;
+    color: black;
+}
+
+.clock::before{
+    content: "00:00:00:00";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    display: flex;
+
+    z-index: -1;
+
+    align-items: center;
+    justify-content: center;
+    font-family: ds;
+    font-size: 8vh;
+    color: black;
+    opacity: 0.12;
+}
+
+.DHMS{
+    position: absolute;
+    top: 32%;
+    font-size: 2vh;
+    color: black;
+    width: 35vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonUnirme{
+    height: 100%;
+    font-family: neue;
+    background-color: #ffffffbb;
+    border: none;
+    border-radius: 0.4vh;
+    font-size: 2vh;
+}
+
+.buttonUnirme:hover{
+    cursor: pointer;
+}
+
+.opaqueDiv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: url(assets/noise.gif);
+    background-size: 90px;
+    background-repeat: repeat;
+    opacity: calc(18/100);
+    z-index: 2;
+}

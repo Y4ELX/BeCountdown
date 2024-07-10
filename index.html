@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>Countdown</title>
+
+    <!-- Preload de fuentes -->
+    <link rel="preload" href="fonts/mn.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ds.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="fonts/neue.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    
+    <!-- Preload de imágenes -->
+    <link rel="preload" href="assets/uncommon.png" as="image">
+    <link rel="preload" href="assets/Betxtwhite.png" as="image">
+    <link rel="preload" href="assets/thunder.png" as="image">
+    <link rel="preload" href="assets/arrow.png" as="image">
+    <link rel="preload" href="assets/hash.png" as="image">
+    <link rel="preload" href="assets/rayito.png" as="image">
+    <link rel="preload" href="assets/noise.gif" as="image">
+
+</head>
+<body>
+    <div class="principalContainer">
+
+        <img src="assets/uncommon.png" style="max-height: 80vh; max-width: 90%; position: absolute;" alt="">
+
+        <img src="assets/Betxtwhite.png" style="position: absolute; height: 3vh; top: 4vh;" alt="">
+
+        <div class="opaqueDiv">
+            <div class="clock">
+                <p id="horaRestante">08:24:25:40</p>
+
+                <div class="DHMS">
+                    <p style="left: 0.6vh; position: relative;">D</p>
+                    <p style="left: 10.5vh; position: relative;">H</p>
+                    <p style="left: 19.5vh; position: relative;">MIN</p>
+                    <p style="left: 28vh; position: relative;">SEC</p>
+                
+                    <img src="assets/thunder.png" style="height: 2vh; position: absolute; top: 3vh; left: 36vh;" alt="">
+                </div>
+
+            </div>
+
+            <div class="text">
+                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+                relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)
+                desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo
+                sobrevivió 500 años, sino que tambien ingresó como texto de relle
+            </div>
+                
+            <div style="position: relative; z-index: 3; border-radius: 0.7vh; margin-inline: 9.7vh; margin-top: 6vh; padding: 0.3vh; height: 3.5vh; display: flex; justify-content: space-between; border: solid 0.2vh #ffffffbb;">
+                <input class="inputCorreo" type="text" placeholder="ej@be@gmail.com">
+                <button class="buttonUnirme">
+                    Unirme a la lista de espera
+                    <img src="assets/arrow.png" style="height: 2vh;" alt="">
+                </button>
+            </div>
+
+        </div>
+
+        <div style="gap: 2vh; position: absolute; bottom: 4vh; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+            <div class="mensajes">
+                <img src="assets/hash.png" style="height: 2vh;" alt="">
+                TE QUEREMOS,MARCE & ARDI
+            </div>
+
+            <div class="mensajes">
+                TO BRAVE SOULS - FROM BRAVE HEARTS
+            </div>
+            
+            <div class="mensajes">
+                <img src="assets/rayito.png" style="height: 2vh;" alt="">
+                EST 2023
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
